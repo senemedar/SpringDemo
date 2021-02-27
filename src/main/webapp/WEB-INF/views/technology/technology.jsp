@@ -4,7 +4,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 <head>
-    <%@include file="dynamic/css.jspf"%>
+    <%@include file="../dynamic/css.jspf"%>
     <title>Moja pierwsza aplikacja Bootstrap</title>
 </head>
 
@@ -14,7 +14,7 @@
     <div id="wrapper">
 
         <!-- Main navigation -->
-        <%@include file="dynamic/navigationMain.jspf"%>
+        <%@include file="../dynamic/navigationMain.jspf"%>
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -171,10 +171,10 @@
             <!-- End of Main Content -->
 
             <!-- footer and logout-->
-            <%@include file="dynamic/board.jspf"%>
+            <%@include file="../dynamic/board.jspf"%>
 
     <!-- Bootstrap core JavaScript-->
-    <%@include file="dynamic/js.jspf"%>
+    <%@include file="../dynamic/js.jspf"%>
 
 </body>
 

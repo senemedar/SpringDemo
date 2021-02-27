@@ -2,7 +2,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.jsp">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href='<c:url value="/"/>'>
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
@@ -14,7 +14,7 @@
 
     <!-- Nav Item - Home -->
     <li class="nav-item active">
-        <a class="nav-link" href="index.jsp">
+        <a class="nav-link" href='<c:url value="/"/>'>
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Home</span></a>
     </li>
@@ -26,28 +26,28 @@
 
     <!-- Nav Item - Kursanci -->
     <li class="nav-item">
-        <a class="nav-link" href="index.jsp">
+        <a class="nav-link" href='<c:url value="/persons"/>'>
             <i class="fas fa-fw fa-users"></i>
             <span>Kursanci</span></a>
     </li>
 
     <!-- Nav Item - Kurs -->
     <li class="nav-item">
-        <a class="nav-link" href="index.jsp">
+        <a class="nav-link" href='<c:url value="/course"/>'>
             <i class="fas fa-fw fa-laptop"></i>
             <span>Kurs</span></a>
     </li>
 
     <!-- Nav Item - Taski -->
     <li class="nav-item">
-        <a class="nav-link" href="index.jsp">
+        <a class="nav-link" href='<c:url value="/tasks"/>'>
             <i class="fas fa-fw fa-tasks"></i>
             <span>Taski</span></a>
     </li>
 
     <!-- Nav Item - Technologie -->
     <li class="nav-item">
-        <a class="nav-link" href="index.jsp">
+        <a class="nav-link" href='<c:url value="/technology"/>'>
             <i class="fas fa-fw fa-cogs"></i>
             <span>Technologie</span></a>
     </li>
@@ -59,7 +59,7 @@
 
     <!-- Nav Item - Ocena -->
     <li class="nav-item">
-        <a class="nav-link" href="index.jsp">
+        <a class="nav-link" href="index">
             <i class="fas fa-fw fa-graduation-cap"></i>
             <span>Ocena</span></a>
     </li>
@@ -71,13 +71,6 @@
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>
-
-    <!--            &lt;!&ndash; Sidebar Message &ndash;&gt;-->
-    <!--            <div class="sidebar-card">-->
-    <!--                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="">-->
-    <!--                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>-->
-    <!--                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>-->
-    <!--            </div>-->
 
 </ul>
 <!-- End of Sidebar -->
