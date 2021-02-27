@@ -46,7 +46,8 @@ public class PersonService {
                 person.getJsp(),
                 person.getThymeleaf(),
                 person.getGit(),
-                person.getCheckbox()
+                person.getCheckbox(),
+                person.getTasks()
         );
         personRepository.save(editPerson);
         System.out.println("editing person on id:" + id);

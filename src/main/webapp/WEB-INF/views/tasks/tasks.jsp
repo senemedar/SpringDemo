@@ -4,7 +4,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 <!DOCTYPE html>
-<%--<html lang="pl">--%>
+<html lang="pl">
 
 <head>
     <%@include file="../dynamic/css.jspf" %>
@@ -129,89 +129,25 @@
 
                     <!-- big cards -->
                     <div class="col">
-                        <div class="card border-left-primary shadow py-2 mb-2">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                            Dodano: dzisiaj
-                                        </div>
-                                        <div class="text-gray-800">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
-                                            aliquam cum cupiditate dicta esse facilis incidunt odio quis, quod, ratione
-                                            repellendus! Blanditiis doloribus ipsa natus, nemo omnis repellat rerum.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card border-left-secondary shadow py-2 mb-2">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                            Dodano: wczoraj
-                                        </div>
-                                        <div class="text-gray-800">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
-                                            aliquam cum cupiditate dicta esse facilis incidunt odio quis, quod, ratione
-                                            repellendus! Blanditiis doloribus ipsa natus, nemo omnis repellat rerum.
+                        <c:forEach items="${taskList}" var="item">
+                            <div class="card ${item.color} shadow py-2 mb-2">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                    ${item.person.firstName} ${item.person.lastName}
+                                                <strong> Dodano: ${item.creationDate}</strong>
+                                            </div>
+                                            <div class="text-gray-800">
+                                                    ${item.description}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="card border-left-success shadow py-2 mb-2">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                            Dodano: przedwczoraj
-                                        </div>
-                                        <div class="text-gray-800">
-                                            A tutaj bez lorem ipsum.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card border-left-info shadow py-2 mb-2">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                            Dodano: 31/12/2020
-                                        </div>
-                                        <div class="text-gray-800">
-                                            To jest stara notatka.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card border-left-warning shadow py-2 mb-2">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                            Dodano: 10/12/2020
-                                        </div>
-                                        <div class="text-gray-800">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
-                                            aliquam cum cupiditate dicta esse facilis incidunt odio quis, quod, ratione
-                                            repellendus! Blanditiis doloribus ipsa natus, nemo omnis repellat rerum.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </c:forEach>
                     </div>
                 </div>
-
 
             </div>
             <!-- /.container-fluid -->

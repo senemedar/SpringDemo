@@ -91,14 +91,14 @@
                                     <div class="form-group row">
                                         <label for="firstName" class="col-2 col-form-label">Imię</label>
                                         <div class="col-10">
-                                            <input class="form-control" name="firstName" type="text"
+                                            <input class="form-control" id="firstName" name="firstName" type="text"
                                                    value="${person.firstName}">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="lastName" class="col-2 col-form-label">Nazwisko</label>
                                         <div class="col-10">
-                                            <input class="form-control" type="text" name="lastName"
+                                            <input class="form-control" id="lastName" type="text" name="lastName"
                                                    value="${person.lastName}">
                                         </div>
                                     </div>
@@ -106,7 +106,7 @@
                                     <div class="form-group row">
                                         <label for="github" class="col-2 col-form-label">URL Git</label>
                                         <div class="col-10">
-                                            <input class="form-control" type="text" name="github"
+                                            <input class="form-control" id="github" type="text" name="github"
                                                    value="${person.github}">
                                         </div>
                                     </div>
@@ -114,7 +114,7 @@
                                     <div class="form-group row">
                                         <label for="start" class="col-2 col-form-label">Od czego się zaczęło:</label>
                                         <div class="col-10">
-                                                <textarea class="form-control" name="start"
+                                                <textarea class="form-control" id="start" name="start"
                                                           rows="5">${person.start}</textarea>
                                         </div>
                                     </div>
@@ -148,7 +148,9 @@
                             </div>
                         </div>
 
-
+                        <c:if test="${person.checkbox eq '0'}">
+                            <input class="form-control" type="hidden" name="java" value="${person.java}">
+                        </c:if>
 
                         <!-- Content Row -->
                         <c:if test="${person.checkbox eq '1'}">
@@ -248,8 +250,10 @@
 
                             <!-- Modal footer -->
                             <div class="modal-footer">
+                                <form method="post" name="deletePerson" action='<c:url value="/editPerson/${id}"/>'>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal">Anuluj</button>
                                 <input type="submit" class="btn btn-danger pull-left" value="Tak"/>
+                                </form>
                             </div>
 
                         </div>

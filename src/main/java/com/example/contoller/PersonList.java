@@ -61,4 +61,11 @@ public class PersonList {
       personService.editPerson(person, Long.parseLong(id));
         return new RedirectView("/editPerson/{id}");
     }
+
+    //delete person
+    @RequestMapping(value = {"/editPerson/{id}"}, method = RequestMethod.POST)
+    public RedirectView deletePerson(@PathVariable String id) {
+        personService.deletePerson(Long.parseLong(id));
+        return new RedirectView("/persons");
+    }
 }

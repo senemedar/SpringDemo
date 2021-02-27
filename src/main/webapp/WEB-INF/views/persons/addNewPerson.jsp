@@ -4,7 +4,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 <!DOCTYPE html>
-<%--<html lang="pl">--%>
+<html lang="pl">
 
 <head>
     <%@include file="../dynamic/css.jspf" %>
